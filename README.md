@@ -13,6 +13,7 @@ This is a zmk config that is suitable for you to test the board. It is built acc
 5. Download the firmware from the `Actions` tab.
 
 ## First time bluetooth connection
+![ble keyboard corne](https://user-images.githubusercontent.com/79617315/230918198-c6b5562f-e7e5-463d-b915-6c299875f332.jpg)
 
 ## Example of keycodes for ZMK remap
 The default firmware does not support mousekeys. However, the encoders on both sides are working as written and prepared by author snstein. For additional features, please refer to the ZMK website. If you have any questions, you can ask in their Discord server. The following are some basic and essential keycodes:
