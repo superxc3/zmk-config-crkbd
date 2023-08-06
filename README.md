@@ -4,6 +4,10 @@ This is a zmk config that is suitable for you to test the board. It is built acc
 ## Useful ZMK repo you may consider to fork
 1. Default ZMK
 2. FTC ZMK - allow mouse movement
+3. Or fork this to your github, and use [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/), this is useful but I did not test yet. It can be compiled successfully in github.
+
+![image](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/7b06ab32-496f-4658-839e-51ad848a449b)
+
 
 ## How to use through github's built in editor
 1. Fork this repo
