@@ -7,7 +7,7 @@ For niceview version, get it from [here](https://drive.google.com/drive/u/0/fold
 
 ## Key remap
 1. Fork this repo to your github. Find the `fork` button on the top right of this page. 
-2. Edit keymap in zmk-config-crkbd/config/corne.keymap, you may refer to <Example of keycodes for ZMK remap>(https://github.com/superxc3/zmk-config-crkbd/tree/master#example-of-keycodes-for-zmk-remap) in this page. Alternatively, you can use [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
+2. Edit keymap in zmk-config-crkbd/config/corne.keymap, you may refer to [Example of keycodes for ZMK remap](https://github.com/superxc3/zmk-config-crkbd/tree/master#example-of-keycodes-for-zmk-remap) in this page. Alternatively, you can use [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 3. Commit changes
 4. Go to `Actions`, click `Build`, `Run workflow`.
 5. Download the firmware from the `Actions` tab.
