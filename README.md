@@ -3,7 +3,7 @@ This is a zmk config that is suitable for you to test the board. It is built acc
 
 The board is pre-flashed with the [left.uf2](https://drive.google.com/file/d/1_m4oQixc_IZxohSQl1CkoeF752q_duMT/view?usp=drive_link) and [right.uf2](https://drive.google.com/file/d/1KWRvnbwFU581RjSXRDAvElPMlIqgQ2dC/view?usp=drive_link). You may always use these to test the board. Additional image called [setting reset.uf2](https://drive.google.com/file/d/1r3C8MBEVbgs5SK3Hc2CyoOIaiAPLB_zp/view?usp=drive_link) for reset purpose, if only if you need it. 
 
-For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS). You may refer to [documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
+For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
 
 ## Key remap
 1. Fork this repo to your github. Find the `fork` button on the top right of this page. 
