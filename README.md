@@ -15,14 +15,17 @@ For niceview version, get it from [here](https://drive.google.com/drive/u/0/fold
 ## First time bluetooth connection
 ![ble keyboard corne](https://user-images.githubusercontent.com/79617315/230918198-c6b5562f-e7e5-463d-b915-6c299875f332.jpg)
 
-## Flashing u2f to split
+## Flashing uf2 to split
+You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHDtAJCxdc7E1w-u/view?usp=sharing) for flashing procedure. Details as follow:
 1. Connect left and right splits to your pc (both connect together using type c cable)
 2. Put right into bootloader mode (press the reset button), one window is popped out showing "nicenano" folder. Dont do anything yet, remember this folder as right split. 
 3. Now press reset button on your left split, one window will be popped out as previous step.
-4. Drag left and right u2f to respective folders.
+4. Drag left and right uf2 to respective folders.
 5. Do not disconnect right split yet. 
 6. Remove left split from type c cable. Proceed to `First time bluetooth connection` to connect your board to pc. If successfully connected, you shall able to type without cable now. 
 8. If so, remove the right split from type c cable. Both should be working good now!
+
+
 
 ## Common Issues and Troubleshooting
 1. [Mac or Window OS connected but not responding](https://zmk.dev/docs/features/bluetooth#macos-connected-but-not-working), this is working for Bluetooth 5.2 Windows.
