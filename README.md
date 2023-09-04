@@ -5,6 +5,11 @@ The board is pre-flashed with the [left.uf2](https://drive.google.com/file/d/1_m
 
 For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
 
+## Quik setup
+1. please fork this github [niceview github](https://github.com/typeractivexyz/corne-wireless-view-zmk-config)
+2. you can use [keymap editor](https://nickcoutsos.github.io/keymap-editor/) to edit keymap
+3. if you discover any problems pls refer to our [zmk-config-crkbd](https://github.com/superxc3/zmk-config-crkbd)
+
 ## Key remap
 1. Fork this repo to your github. Find the `fork` button on the top right of this page. For niceview, fork [niceview](https://github.com/typeractivexyz/corne-wireless-view-zmk-config) github instead.
 2. Edit keymap in zmk-config-crkbd/config/corne.keymap, you may refer to [Example of keycodes for ZMK remap](https://github.com/superxc3/zmk-config-crkbd/tree/master#example-of-keycodes-for-zmk-remap) in this page. Alternatively, you can use [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
