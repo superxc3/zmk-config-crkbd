@@ -21,7 +21,7 @@ After you make sure that the board can be connected and every key is registering
 |:--:|
 | 4. Choose github repo you just forked in 1. 5. Start edit your keymap, after finish click SAVE. Wait until it finished sync, click LATEST and download the firmware. If it does not auto run, Go to `Actions`, click `Build`, `Run workflow`.|
 
-||![4](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/e56acc85-680d-41fc-a6ad-b10fc1767a37)|
+|![4](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/e56acc85-680d-41fc-a6ad-b10fc1767a37)|
 |:--:|
 |6. After you click LATEST, it directs you to this webpage. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
 
