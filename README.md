@@ -45,6 +45,15 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 5. For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS) or [here](https://drive.google.com/drive/folders/1p5twDqSFcLPDTAh1r9uKbbJ-_LQ2O5IX?usp=drive_link). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
 6. No key is registering: have you toggled the power button? (if you have one)
 
+## Light indicator from Supermini MCU
+1. Blue light: you are connected to usb c and the board is charging
+2. Slight blue light blinking: you are connected to usb c but not connected to battery. Toggle power button to allow charging.
+3. Blink red once: when you toggle the power button on
+4. Flashing red: no firmware flashed to the mcu yet
+
+## Power button toggle
+1. For mx, slide to left = off. Slide to right = on. Applicable on both sides.
+
 # Future planning
 To change the keymap according to Klein's or Bastard C Nano for better inspiration.
 
