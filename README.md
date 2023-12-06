@@ -54,6 +54,11 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 ## Power button toggle
 1. For mx, slide to left = off. Slide to right = on. Applicable on both sides.
 
+## Switch installation
+1. For mx with pom switch plate, no foam. You will face difficulty in inserting the switch directly to the board. Dissemble the top five screw on each side, push the switch one by one. Fill up the switch plate, then only assemble it back to the board. This is because pom is flex and soft, hence the difficulty to install the switch directly.
+2. For mx with carbon fibre switch plate. If you face difficulty in inserting the switch directly, do the same as step 1.
+3. For lp choc, just push the switch directly. You may face difficulty in removing the switch for certain model. If the switch doesnt pull up when you pull the keycaps, you have to dissemble the bottom plate and push the choc switch from bottom of pcb. This is because lp choc switch doesnt have dedicated switch puller. 
+
 # Future planning
 To change the keymap according to Klein's or Bastard C Nano for better inspiration.
 
