@@ -41,9 +41,8 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 1. [Mac or Window OS connected but not responding](https://zmk.dev/docs/features/bluetooth#macos-connected-but-not-working), this is working for Bluetooth 5.2 Windows.
 2. Master connected and can type, but not slave refer to [Split Keyboard Halves Unable to Pair](https://zmk.dev/docs/troubleshooting#split-keyboard-halves-unable-to-pair).
 3. You may compile the reset.uf2 yourself or get it from [setting reset.uf2](https://drive.google.com/file/d/1r3C8MBEVbgs5SK3Hc2CyoOIaiAPLB_zp/view?usp=drive_link).
-4. The board is pre-flashed with the [left.uf2](https://drive.google.com/file/d/1_m4oQixc_IZxohSQl1CkoeF752q_duMT/view?usp=drive_link) and [right.uf2](https://drive.google.com/file/d/1KWRvnbwFU581RjSXRDAvElPMlIqgQ2dC/view?usp=drive_link). You may always use these to test the board.
-5. For niceview version, get it from [here](https://drive.google.com/drive/u/0/folders/1zrGXbjNoFAU9e0BY-wZ6xVu2WyWjd4MS) or [here](https://drive.google.com/drive/folders/1p5twDqSFcLPDTAh1r9uKbbJ-_LQ2O5IX?usp=drive_link). You may refer to [Typeractive documentation](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware) for more details.
-6. No key is registering: have you toggled the power button? (if you have one)
+4. The board is pre-flashed with the [these uf2](https://drive.google.com/drive/folders/1p5twDqSFcLPDTAh1r9uKbbJ-_LQ2O5IX?usp=drive_link). You may always use these to test the board.
+5. No key is registering: have you toggled the power button? (if you have one)
 
 ## Light indicator from Supermini MCU
 1. Blue light: you are connected to usb c and the board is charging
@@ -51,6 +50,10 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 3. Blink red once: when you toggle the power button on
 4. Flashing red: no firmware flashed to the mcu yet
 
+## Light indicator from Nicenano v2 MCU
+1. Blue light: you are connected to usb c and the board is charging
+2. Blue blinking: bootloader mode, no firmware is loaded
+   
 ## Power button toggle
 1. For mx, slide to left = off. Slide to right = on. Applicable on both sides.
 
