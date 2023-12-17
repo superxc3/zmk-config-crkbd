@@ -25,6 +25,37 @@ After you make sure that the board can be connected and every key is registering
 |:--:|
 |6. After you click LATEST, it directs you to this webpage. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
 
+## Key remap for mouse repo using keymap editor 
+Supports provided by nickcoutsos. Please follow step 1-4 above. We are using the popular choice https://github.com/urob/zmk/tree/mouse-3.2 mouse emulation branch that maintained by zmk users. 
+
+a. Create a new branch in Keymap Editor. Click the three dots beside Latest> Create new branch > Name your branch, eg. mouse
+
+b. Go to the top right setting icon. Tick Mouse keys/button/scroll
+
+c. Start mapping your keymaps in Keymap Editor > save
+
+d. Edit your `config/west.yml`. Kindly copy the following and paste. It will not worked if you accidentally add an extra space before `-`. 
+```
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
+  projects:
+    - name: zmk
+      remote: urob
+      revision: mouse-3.2
+      import: app/west.yml
+  self:
+    path: config
+```
+
+e. Add `#include <dt-bindings/zmk/mouse.h>` to `config/keymap`.
+
+f. Go to Action and wait for the firmware to be compiled.
+
+
 ## Flashing uf2 to split
 You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHDtAJCxdc7E1w-u/view?usp=sharing) for flashing procedure. Details as follow:
 1. Connect left and right splits to your pc (both connect together using type c cable). 
