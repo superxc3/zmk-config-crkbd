@@ -26,6 +26,8 @@ After you make sure that the board can be connected and every key is registering
 |6. After you click LATEST, it directs you to this webpage. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
 
 ## Key remap for mouse repo using keymap editor 
+Update: 20231221 - not working
+
 Supports provided by nickcoutsos. Please follow step 1-4 above. We are using the popular choice https://github.com/urob/zmk/tree/mouse-3.2 mouse emulation branch that maintained by zmk users. Youtube tutorial [here](https://youtu.be/EMqbFQsX2hI?si=NW-SRp4-RNsd9Pdi).
 
 a. Create a new branch in Keymap Editor. Click the three dots beside Latest> Create new branch > Name your branch, eg. mouse
