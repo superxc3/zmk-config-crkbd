@@ -1,4 +1,4 @@
-# Basic Setup for ZMK CRKBD CORNE
+# Corne ZMK setup
 This is suitable for Corne with the following features:
 - 42 keys
 - 36 keys (change to `&five_column_transform` in `corne.keymap`, delete outer columns in keymap)
@@ -19,7 +19,7 @@ After you make sure that the board can be connected and every key is registering
 ### Steps
 |![1fork](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/c1d1d583-d07d-4178-bc88-3ae4230202e6)|
 |:--:|
-|1. Please fork this [main-with-native-mouse repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md)github repo.|
+|1. Please fork this [main-with-native-mouse](https://github.com/superxc3/corne-wireless-view-zmk-config/tree/main-with-native-mouse) github repo.|
 
 |![2 githubsignin](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/53f00200-1405-48dd-85db-231bd4cf28db)|
 |:--:|
@@ -29,7 +29,8 @@ After you make sure that the board can be connected and every key is registering
 |:-|
 | 4. Choose github repo you just forked in 1. Make sure you select the correct Branch `main-with-native-mouse` for mouse repo. |
 | 5. Start edit your keymap, after finish click SAVE. |
-| 6. For mouse keys, please refer to [Keycode](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md#keycode). Head to `corne.keymap` and key in mouse keycode |
+|![image](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/ad01038c-450a-40eb-826e-58a48b027377)|
+| 6. For mouse keys, please refer to [Keycode](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md#keycode). Head to `corne.keymap` and key in mouse keycode. You can refer to layer 7 in Keymap Editor for some samples. |
 | 7. Click save or commit changes. If it does not auto run, Go to `Actions`, click `Build`, `Run workflow`|
 
 |![4](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/e56acc85-680d-41fc-a6ad-b10fc1767a37)|
@@ -72,18 +73,8 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 ## Light indicator from Nicenano v2 MCU
 1. Blue light: you are connected to usb c and the board is charging
 2. Blue blinking: bootloader mode, no firmware is loaded
-   
-</br>
-
-## Switch installation
-1. For mx with pom switch plate, no foam. You will face difficulty in inserting the switch directly to the board. Dissemble the top five screw on each side, push the switch one by one. Fill up the switch plate, then only assemble it back to the board. This is because pom is flex and soft, hence the difficulty to install the switch directly.
-2. For mx with carbon fibre switch plate. If you face difficulty in inserting the switch directly, do the same as step 1.
-3. For lp choc, just push the switch directly. You may face difficulty in removing the switch for certain model. If the switch doesnt pull up when you pull the keycaps, you have to dissemble the bottom plate and push the choc switch from bottom of pcb. This is because lp choc switch doesnt have dedicated switch puller. 
-
-</br>
-
-# Future planning
-To change the keymap according to Klein's or Bastard C Nano for better inspiration.
 
 
-:star: If you like our service or products, please tell your friends and family about us so we can grow and offer more options in the future. We strive to provide comprehensive user manuals to save you time exploring our products. We welcome any suggestions you have to help us improve our boards.
+
+
+
