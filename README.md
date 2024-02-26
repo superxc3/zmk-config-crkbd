@@ -4,7 +4,9 @@ This is suitable for Corne with the following features:
 - 36 keys (change to `&five_column_transform` in `corne.keymap`, delete outer columns in keymap)
 - with or without niceview support
 - with mousekey enabled
-  
+
+Quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
+
 </br>
 
 ## First time bluetooth connection
