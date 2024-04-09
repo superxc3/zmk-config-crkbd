@@ -3,9 +3,10 @@ This is suitable for Corne with the following features:
 - 42 keys
 - 36 keys (change to `&five_column_transform` in `corne.keymap`, delete outer columns in keymap)
 - with or without niceview support
-- with mousekey enabled
 
-Quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
+## Advanced user
+- with mousekey enabled
+- quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
 
 </br>
 
