@@ -6,9 +6,9 @@ This is suitable for Corne with the following features:
 - Please fork [here](https://github.com/superxc3/corne-wireless-view-zmk-config) instead of this repo. 
 
 ## Advanced user
-- with mousekey enabled
-- quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
-
+- with mousekey enabled, quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
+- Miryoku layout just head to [miryoku_zmk](https://github.com/manna-harbour/miryoku_zmk), follow their guides: [Quickstart](https://github.com/manna-harbour/miryoku_zmk/tree/master/docs/quickstart).
+  
 </br>
 
 ## First time bluetooth connection
