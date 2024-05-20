@@ -33,7 +33,7 @@ After you make sure that the board can be connected and every key is registering
 | 4. Choose github repo you just forked in 1. (for advanced users with mousekey supports make sure you choose the correct branch)|
 | 5. Start edit your keymap, after finish click SAVE. |
 |![image](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/ad01038c-450a-40eb-826e-58a48b027377)|
-| 6. For advanced users with mouse keys, please refer to [Keycode](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md#keycode). Head to `corne.keymap` and key in mouse keycode. You can refer to layer 7 in Keymap Editor for some samples. |
+| 6. For advanced users with mouse keys, please refer to [Keycode](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi). Head to `corne.keymap` and key in mouse keycode. You can refer to layer 7 in Keymap Editor for some samples. |
 | 7. Click save or commit changes. If it does not auto run, Go to `Actions`, click `Build`, `Run workflow`|
 
 |![4](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/e56acc85-680d-41fc-a6ad-b10fc1767a37)|
@@ -81,8 +81,25 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 ## Advanced user
 - with mousekey enabled, quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
 - kindly note that some keycodes are different from zmk mouse repo, please refer to [native-keycode](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi) for full list. Use these keycodes in `corne.keymap`, some codes are not available and synced with Keymap Editor, you are not encouraged to remap mouse key in Keymap Editor. You have to update the corne.keymap through coding but not Keymap Editor.
-- Miryoku layout just head to [miryoku_zmk](https://github.com/manna-harbour/miryoku_zmk), follow their guides: [Quickstart](https://github.com/manna-harbour/miryoku_zmk/tree/master/docs/quickstart). 
-  
+- Miryoku layout just head to [miryoku_zmk](https://github.com/manna-harbour/miryoku_zmk), follow their guides: [Quickstart](https://github.com/manna-harbour/miryoku_zmk/tree/master/docs/quickstart).
+
+### Keycodes for mouse-native-repo
+[Source](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi)
+
+| Mouse Function   | Keycode in corne.keymap |
+|------------------|-------------------------|
+| Mouse Button 1   | `&mkp MB1`              |
+| Mouse Button 2   | `&mkp MB2`              |
+| Mouse Button 3   | `&mkp MB3`              |
+| Move Cursor Up   | `&mmv MOVE_UP`          |
+| Move Cursor Down | `&mmv MOVE_DOWN`        |
+| Move Cursor Left | `&mmv MOVE_LEFT`        |
+| Move Cursor Right| `&mmv MOVE_RIGHT`       |
+| Mouse Scroll Up  | `&msc SCROLL_UP`        |
+| Mouse Scroll Down| `&msc SCROLL_DOWN`      |
+| Mouse Scroll Left| `&msc SCROLL_LEFT`      |
+| Mouse Scroll Right| `&msc SCROLL_RIGHT`    |
+
 
 
 
