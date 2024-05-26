@@ -1,12 +1,9 @@
 # Corne ZMK setup
-This is suitable for Corne with the following features:
-- 42 keys
-- 36 keys (change to `&five_column_transform` in `corne.keymap`, delete outer columns in keymap)
-- with or without niceview support
+This repo is suitable for general corne. 
 
 ## Repo to go
-1. Corne 42keys with niceview, please fork [niceview](https://github.com/typeractivexyz/corne-wireless-view-zmk-config).
-2. Corne 42keys with oled, please fork this repo. 
+1. Corne 42keys with niceview, please fork [42-niceview](https://github.com/superxc3/zmk-config-crkbd/tree/42-niceview).
+2. Corne 42keys with oled, please fork [master](https://github.com/superxc3/zmk-config-crkbd/tree/master). 
 
 </br>
 
@@ -79,26 +76,10 @@ You may refer to the [demo](https://drive.google.com/file/d/1_iiBsk6CXnIYhRzzQHD
 </br>
 
 ## Advanced user
-- with mousekey enabled, quick link to [mouse-native-repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/main-with-native-mouse/README.md).
-- kindly note that some keycodes are different from zmk mouse repo, please refer to [native-keycode](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi) for full list. Use these keycodes in `corne.keymap`, some codes are not available and synced with Keymap Editor, you are not encouraged to remap mouse key in Keymap Editor. You have to update the corne.keymap through coding but not Keymap Editor.
+- 36 keys (change to `&five_column_transform` in `corne.keymap`, delete outer columns in keymap)
+- mousekeys enabled for advanced users, please go to [Corne zmk mousekeys repo](https://github.com/superxc3/corne-wireless-view-zmk-config/blob/master/README.md).
 - Miryoku layout just head to [miryoku_zmk](https://github.com/manna-harbour/miryoku_zmk), follow their guides: [Quickstart](https://github.com/manna-harbour/miryoku_zmk/tree/master/docs/quickstart).
 
-### Keycodes for mouse-native-repo
-[Source](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi)
-
-| Mouse Function   | Keycode in corne.keymap |
-|------------------|-------------------------|
-| Mouse Button 1   | `&mkp MB1`              |
-| Mouse Button 2   | `&mkp MB2`              |
-| Mouse Button 3   | `&mkp MB3`              |
-| Move Cursor Up   | `&mmv MOVE_UP`          |
-| Move Cursor Down | `&mmv MOVE_DOWN`        |
-| Move Cursor Left | `&mmv MOVE_LEFT`        |
-| Move Cursor Right| `&mmv MOVE_RIGHT`       |
-| Mouse Scroll Up  | `&msc SCROLL_UP`        |
-| Mouse Scroll Down| `&msc SCROLL_DOWN`      |
-| Mouse Scroll Left| `&msc SCROLL_LEFT`      |
-| Mouse Scroll Right| `&msc SCROLL_RIGHT`    |
 
 
 
