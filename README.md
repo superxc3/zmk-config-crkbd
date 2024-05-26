@@ -2,7 +2,6 @@
 This is suitable for Corne with the following features:
 - 42 keys
 - with niceview support
-- Please fork [here](https://github.com/superxc3/corne-wireless-view-zmk-config) instead of this repo. 
 
 </br>
 
