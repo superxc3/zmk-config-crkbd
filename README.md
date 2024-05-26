@@ -5,8 +5,8 @@ This is suitable for Corne with the following features:
 - with or without niceview support
 
 ## Repo to go
-1. Corne 42/36 keys with niceview, please fork [niceview](https://github.com/typeractivexyz/corne-wireless-view-zmk-config).
-2. Corne 42/36 keys with oled, please fork this repo. 
+1. Corne 42keys with niceview, please fork [niceview](https://github.com/typeractivexyz/corne-wireless-view-zmk-config).
+2. Corne 42keys with oled, please fork this repo. 
 
 </br>
 
