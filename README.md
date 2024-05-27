@@ -3,7 +3,8 @@ This repo is suitable for general corne.
 
 ## Repo to go
 1. Corne 42keys with niceview, please fork [42-niceview](https://github.com/superxc3/zmk-config-crkbd/tree/42-niceview).
-2. Corne 42keys with oled, please fork [master](https://github.com/superxc3/zmk-config-crkbd/tree/master). 
+2. Corne 42keys with oled, please fork [42-oled](https://github.com/superxc3/zmk-config-crkbd/tree/42-oled).
+3. Corne 36keys with niceview, please fork [36-niceview](https://github.com/superxc3/zmk-config-crkbd/tree/36-niceview).
 
 </br>
 
@@ -17,26 +18,88 @@ Please test before flashing to avoid complicating troubleshoot procedure.
 After you make sure that the board can be connected and every key is registering, you can proceed to remap the keys according to your needs.
 
 ### Steps
-|![1fork](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/c1d1d583-d07d-4178-bc88-3ae4230202e6)|
-|:--:|
-|1. Please fork this repo for oled display or [niceview](https://github.com/typeractivexyz/corne-wireless-view-zmk-config).|
 
-|![2 githubsignin](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/53f00200-1405-48dd-85db-231bd4cf28db)|
-|:--:|
-|2. Go to [keymap editor](https://nickcoutsos.github.io/keymap-editor/) to edit keymap.	Choose Github from the list. 3. Sign in your github account.|
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/e0200ed6-19f7-4741-9c02-93d3358bd9c2" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>1. Fork this to your github, make sure you have created a github account.</td>
+  </tr>
+</table>
 
-|![3](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/69422119-67fd-4c99-99bf-5a27e0ba2fab)|
-|:-|
-| 4. Choose github repo you just forked in 1. (for advanced users with mousekey supports make sure you choose the correct branch)|
-| 5. Start edit your keymap, after finish click SAVE. |
-|![image](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/ad01038c-450a-40eb-826e-58a48b027377)|
-| 6. For advanced users with mouse keys, please refer to [Keycode](https://github.com/urob/zmk-config/blob/upstream-mouse/config/mouse.dtsi). Head to `corne.keymap` and key in mouse keycode. You can refer to layer 7 in Keymap Editor for some samples. |
-| 7. Click save or commit changes. If it does not auto run, Go to `Actions`, click `Build`, `Run workflow`|
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/b30733c7-e8d6-43c0-ac1d-5bb9b6e548b3" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>2. Untick this so it allows you to copy niceview and oled branches, then create <code>fork</code>.</td>
+  </tr>
+</table>
 
-|![4](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/e56acc85-680d-41fc-a6ad-b10fc1767a37)|
-|:--:|
-|8. Click firmware and extract the two uf2 out. Drop to left and right respectively.|
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/f3318d8b-c97b-4745-90ac-8871618a5d6b" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>3. Click <code>action</code></td>
+  </tr>
+</table>
 
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/dffcef9d-fd64-45be-8480-d1409f552245" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>4. Click the left <code>.github/workflows/build...</code>, and click <code>Run workflow</code> on right. Wait it run for a few minutes until a green tick.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/adc7d76c-da79-4cd3-9354-4bd467e30292" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+<td>5. Go to <a href="https://nickcoutsos.github.io/keymap-editor/"><code>Keymap Editor</code></a>.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/3acddcbf-2675-417f-9d3d-5d32b44c43b5" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>6. Choose <code>Add/remove repo...</code></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/a5d41e31-006d-457f-a223-6450b1a86712" alt="Your Image Description" width="400"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>6. Sign in to your github account and <code>select repo..</code>, choose <code>zmk_config_sofle</code> and <code>save</code>.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/f0a6727c-9a2d-40fc-816b-5850a3e2b8ee" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>7. Now choose your repo and correct branch, and you can start mapping. Once it is done click <code>save</code>, wait until it finished compiling then click <code>Latest</code>.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/superxc3/zmk_config_sofle/assets/79617315/72fd65f7-8441-4f28-a735-ab1a6976902c" alt="Your Image Description" width="600"></td>
+  </tr>
+  <tr style="background-color:grey;">
+    <td>8. Scroll down and go to download <code>Firmware</code>.</td>
+  </tr>
+</table>
 
 
 </br>
