@@ -1,6 +1,6 @@
 # Corne ZMK setup
 This is suitable for Corne with the following features:
-- 42 keys
+- 36 keys
 - with niceview support
 
 </br>
