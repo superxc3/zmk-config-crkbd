@@ -17,7 +17,7 @@ After you make sure that the board can be connected and every key is registering
 ### Steps
 |![1fork](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/c1d1d583-d07d-4178-bc88-3ae4230202e6)|
 |:--:|
-|1. Please fork this [main-with-native-mouse](https://github.com/superxc3/corne-wireless-view-zmk-config/tree/main-with-native-mouse) github repo.|
+|1. Please fork correct github repo.|
 
 |![2 githubsignin](https://github.com/superxc3/zmk-config-crkbd/assets/79617315/53f00200-1405-48dd-85db-231bd4cf28db)|
 |:--:|
