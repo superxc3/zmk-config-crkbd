@@ -11,6 +11,13 @@ Please test before flashing to avoid complicating troubleshoot procedure.
 
 </br>
 
+## Niceview display explanation
+
+|![rerere](https://github.com/superxc3/zmk_config_sofle/assets/79617315/7a996511-bb89-45d0-9dd8-ce7c000174e0)|
+|:--:|
+
+</br>
+
 ## Key remap
 After you make sure that the board can be connected and every key is registering, you can proceed to remap the keys according to your needs.
 
