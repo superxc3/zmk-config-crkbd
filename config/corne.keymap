@@ -36,7 +36,7 @@
 &bt BT_CLR_ALL  &kp SINGLE_QUOTE           &kp COMMA                &kp PERIOD            &kp P                    &kp Y              &kp F      &kp G                     &kp C                 &kp R                     &kp L                       &bt BT_CLR_ALL
 &bt BT_SEL 0    &homerow_mod LEFT_SHIFT A  &homerow_mod LEFT_ALT O  &homerow_mod LCTRL E  &homerow_mod LEFT_WIN I  &kp U              &kp D      &homerow_mod RIGHT_GUI H  &homerow_mod RCTRL T  &homerow_mod RIGHT_ALT N  &homerow_mod RIGHT_SHIFT S  &bt BT_SEL 0
 &none           &kp COLON                  &kp Q                    &kp J                 &kp K                    &kp X              &kp B      &kp M                     &kp W                 &kp V                     &kp Z                       &none
-                                                                    &none                 &kp ESC                  &lt 1 BACKSPACE    &kp ENTER  &lt 2 SPACE               &mo 3
+                                                                    &none                 &kp LEFT_SHIFT           &lt 1 BACKSPACE    &kp ENTER  &lt 2 SPACE               &mo 3
             >;
         };
 
