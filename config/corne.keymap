@@ -33,10 +33,10 @@
 
             label = "Base";
             bindings = <
-&bt BT_CLR_ALL  &kp SINGLE_QUOTE           &kp COMMA                &kp PERIOD            &kp P                    &kp Y              &kp F      &kp G                     &kp C                 &kp R                     &kp L                       &bt BT_CLR_ALL
-&bt BT_SEL 0    &homerow_mod LEFT_SHIFT A  &homerow_mod LEFT_ALT O  &homerow_mod LCTRL E  &homerow_mod LEFT_WIN I  &kp U              &kp D      &homerow_mod RIGHT_GUI H  &homerow_mod RCTRL T  &homerow_mod RIGHT_ALT N  &homerow_mod RIGHT_SHIFT S  &bt BT_SEL 0
-&none           &kp COLON                  &kp Q                    &kp J                 &kp K                    &kp X              &kp B      &kp M                     &kp W                 &kp V                     &kp Z                       &none
-                                                                    &none                 &kp LEFT_SHIFT           &lt 1 BACKSPACE    &kp ENTER  &lt 2 SPACE               &mo 3
+&kp LEFT_GUI  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD    &kp P         &kp Y              &kp F             &kp G        &kp C          &kp R  &kp L  &kp RGUI
+&kp LCTRL     &kp A             &kp O      &kp E         &kp I         &kp U              &kp D             &kp H        &kp T          &kp N  &kp S  &kp RCTRL
+&kp LSHFT     &kp COLON         &kp Q      &kp J         &kp K         &kp X              &kp B             &kp M        &kp W          &kp V  &kp Z  &kp RSHIFT
+                                           &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 BACKSPACE    &mt RSHIFT ENTER  &lt 2 SPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -65,10 +65,10 @@
 
             label = "Raise";
             bindings = <
-&none  &kp TAB       &trans        &trans        &kp K_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &trans     &none
-&none  &kp ESCAPE    &trans        &trans        &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp ENTER  &none
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4       &kp N5                  &kp NUMBER_6   &kp N7    &kp N8        &kp N9     &kp N0     &none
-                                   &trans        &trans             &trans                  &trans         &trans    &trans
+&bt BT_CLR_ALL  &kp TAB       &trans        &trans        &kp K_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &trans     &bt BT_CLR_ALL
+&bt BT_SEL 0    &kp ESCAPE    &trans        &trans        &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp ENTER  &bt BT_SEL 0
+&none           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4       &kp N5                  &kp NUMBER_6   &kp N7    &kp N8        &kp N9     &kp N0     &none
+                                            &trans        &trans             &trans                  &trans         &trans    &trans
             >;
         };
 
