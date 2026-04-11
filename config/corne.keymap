@@ -9,101 +9,242 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+//#define DEFAULT 0
+//#define LOWER 1
+//#define RAISE 2
+//#define TRI 3
+//#define CS 4
+//#define VALORANT 5
+//#define DEFAULTMAC 6
+//#define LOWERMAC 7
+//#define RAISEMAC 8
+//#define TRIMAC 9
+
+/ {
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
+            tri_layer {
+                if-layers = <1 2>;
+                then-layer = <3>;
+            };
+//           trimac_layer {
+//                if-layers = <7 8>;
+//                then-layer = <9>;
+//            };
+        };
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// LAYER 0 - WINDOWS ____________________________________________________________________________________________________________________________
+                default_layer {
+                    bindings = <
+//  _______________________________________________________________      ________________________________________________________________
+// |    TAB   |    Q     |    W     |    E     |    R    |    T    |    |    Y    |    U     |    I     |    O     |    P     |    BKSP  |
+    &kp TAB    &kp Q      &kp W      &kp E      &kp R     &kp T          &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSPC
+// |_______________________________________________________________      ________________________________________________________________|    
+// |    CTRL  |    A     |    S     |    D     |    F    |    G    |    |    H    |    J     |    K     |    L     |    ;     |    '     |
+    &kp LCTRL  &kp A      &kp S      &kp D      &kp F     &kp G          &kp H     &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+// |_______________________________________________________________      ________________________________________________________________| 
+// |    SHFT  |    Z     |    X     |    C     |    V    |    B    |    |    N    |    M     |    ,     |    .     |    /     |    ESC   |
+    &kp LSHFT  &kp Z      &kp X      &kp C      &kp V     &kp B          &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp ESC
+// |_______________________________________________________________      ________________________________________________________________|
+//                                  |    ALT   |  LOWER  |  SPACE  |    |  ENTER  |   RAISE  |    GUI   |
+                                     &kp LALT   &mo 1     &kp SPACE      &kp RET   &mo 2      &kp LGUI
+//                                  |__________|_________|_________|    |_________|__________|__________|
+                    >;
+                };
+                
 
-            label = "Base";
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
-            >;
-        };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |STDUL|     |     |     |   |     |     |     |     |     |      |
-            //                    |BTCLR|     | SPC |   | ENT |     | ALT |
+ // LAYER 1 - WINDOWS ____________________________________________________________________________________________________________________________
+                lower_layer {
+                    bindings = <
+//  _______________________________________________________________     __________________________________________________________________________
+// |   BKSP   |    F1    |    F2    |    F3    |    F4   |    F5   |    |    ^      |    &    |    *          |    (       |    )      |    =     |
+    &kp BSPC   &kp F1     &kp F2     &kp F3     &kp F4    &kp F5         &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR     &kp RPAR    &kp EQUAL
+//  _______________________________________________________________     __________________________________________________________________________|    
+// |    CTRL  |    1     |    2     |    3     |    4    |    5    |    |    -      |    +    |    `          |    {       |    }      |    \     |
+    &kp LCTRL  &kp N1     &kp N2     &kp N3     &kp N4    &kp N5         &kp MINUS   &kp PLUS  &kp GRAVE       &kp LBRC     &kp RBRC    &kp BSLH
+//  _______________________________________________________________     __________________________________________________________________________|      
+// |    SHFT  |    6     |    7     |    8     |    9    |    0    |    |    _      |    <    |    >          |    [       |    ]      |   "|"    |
+    &kp LSHFT  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp UNDER   &kp LT    &kp GT          &kp LBKT     &kp RBKT    &kp PIPE
+//  _______________________________________________________________     __________________________________________________________________________|    
+//                                  |    ALT   |         |    DEL  |    |   ENTER   |         |    GUI        |
+                                     &kp LALT   &trans    &kp DELETE     &kp RET     &trans    &kp LGUI
+//                                  |_________ |_________|_________|    |___________|_________|_______________|
+                        >;
+                };
 
-            label = "Lower";
-            bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &studio_unlock        &trans        &trans        &trans        &bootloader     &trans    &trans    &trans    &trans     &trans  &trans
-                                        &bt BT_CLR    &trans        &kp SPACE       &kp RET   &trans    &kp RALT
-            >;
-        };
 
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+// LAYER 2 - WINDOWS ____________________________________________________________________________________________________________________________
+                raise_layer {
+                    bindings = <
+//  _______________________________________________________________      _______________________________________________________________________________
+// |    TAB   |    !     |    @     |    #     |    $    |    %    |    |    MACOS   |    HOME    |    UP       |    END      |    INS    |    DEL      |
+    &kp TAB    &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT      &tog 6       &kp HOME       &kp UP      &kp END       &kp INSERT    &kp DELETE
+//  _______________________________________________________________      _______________________________________________________________________________   
+// |    CTRL  |          |          |          |         |         |    |            |  LFT       |    DWN      |    RGT      |           |    PG_UP    |
+    &kp LCTRL  &trans     &trans     &trans     &trans    &trans         &trans       &kp LEFT     &kp DOWN      &kp RIGHT     &trans      &kp PAGE_UP
+//  _______________________________________________________________      _______________________________________________________________________________      
+// |    SHFT  |          |          |          |         |         |    | CAP        |            |             |             |           |    PG_DWN   |
+    &kp LSHFT  &trans     &trans     &trans     &trans    &trans         &kp CAPSLOCK &trans       &trans        &trans        &trans      &kp PAGE_DOWN
+//  _______________________________________________________________      _______________________________________________________________________________|       
+//                                  | ALT      |         |    SPC  |    |   ENTER    |            |    GUI      |
+                    	             &kp LALT   &trans    &kp SPACE      &kp RET      &trans       &kp LGUI
+//                                  |_________ |_________|_________|    |____________|____________|_____________|
+                        >;
+                };
+                
+ 
+// LAYER 3 - WINDOWS ____________________________________________________________________________________________________________________________
+                tri_layer {
+                    bindings = <
+//  _________________________________________________________________________________________      ___________________________________________________________________________
+// |                |       CS       |     VALO     |    MACOS    |             |            |    |            |            |              |          |           |           |
+    &trans           &tog 4           &tog 5         &tog 6        &trans        &trans            &trans       &trans       &trans         &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________
+// |    BTCLR       |    BT1         |    BT2       |    BT3      |    BT4      | BT5        |    |            |            |              |          |           |           |  
+    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans       &trans      &trans         &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________  
+// |                |                |              |             |             |            |    |            |            |              |          |           |           |
+    &trans           &trans           &trans         &trans        &trans        &trans            &trans       &trans       &trans        &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________|
+//                                                  |    ALT      |             | SPC        |    |            |            | GUI          |   
+                    	                             &kp LALT      &trans        &kp SPACE         &kp RET      &trans       &kp LGUI
+//                                                  |_____________|_____________|____________|    |____________|____________|______________|
+                        >;
+                };
+                
 
-            label = "Raise";
-            bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET    &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS    &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &bootloader  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET      &trans     &kp RALT
-            >;
-        };
+// LAYER 4 ____________________________________________________________________________________________________________________________
+                csgo_layer {
+                    bindings = <
 
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
+//  _______________________________________________________________      ________________________________________________________________
+// |SCOREBOARD|    1     |    2     |    3     |    4    | C4 DROP |    |    7    |    8     |    9     |    .     | DFLT LYR |    CS    |
+// |    TAB   |    1     |    2     |    3     |    4    |    J    |    |    7    |    8     |    9     |    .     | DFLT LYR |    CS    |
+    &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4    &kp J          &kp N7    &kp N8     &kp N9     &kp DOT    &tog 0     &tog 4
+//  _______________________________________________________________      ________________________________________________________________
+// |    MAP   | PRVS WPN |    UP    |   USE    | RELOAD  |JUMPTHROW|    |    4    |    5     |    6     | INVENTORY|    P     | CONSOLE  |
+// |    CTRL  |    Q     |    W     |    E     |    R    |    T    |    |    4    |    5     |    6     |    I     |    P     |     '    |
+    &kp LCTRL  &kp Q      &kp W      &kp E      &kp R     &kp T          &kp N4    &kp N5     &kp N6     &kp I      &kp P      &kp SQT
+// |_______________________________________________________________      ________________________________________________________________|    
+// |    WALK  |  LEFT    |  DOWN    |  RIGHT   |  FLASH  |  THROW  |    |    1    |    2     |    3     |    L     |    ;     |   ESC    |
+// |    SHFT  |    A     |    S     |    D     |    F    |    G    |    |    1    |    2     |    3     |    L     |    ;     |   ESC    |
+    &kp LSHFT  &kp A      &kp S      &kp D      &kp F     &kp G          &kp N1    &kp N2     &kp N3     &kp L      &kp SEMI   &kp ESC
+// |_______________________________________________________________      ________________________________________________________________|
+//                                  |SMOKE/DECOY|  CROUCH |   MIC   |    |   BUY   |   COMM   |  DECOY   |
+//                                  |  H/LALT   |    V    |    C    |    |   BUY   |    Z     |    H     |
+                                     &mt LALT H  &kp V     &kp C          &kp B     &kp Z      &kp H
+//                                  |___________|_________|_________|    |_________|__________|__________|
+                    >;
+                };
+                
+ 
+// LAYER 5 ____________________________________________________________________________________________________________________________
+                valorant_layer {
+                    bindings = <
+//  _______________________________________________________________      ________________________________________________________________
+// |SCOREBOARD|    1     |    2     |    3     |    4    |RADIO CMD|    |    7    |    8     |    9     |    .     | DFLT LYR | VALO LYR |
+// |    TAB   |    1     |    2     |    3     |    4    |    P    |    |    7    |    8     |    9     |    .     | DFLT LYR |   VALO   |
+    &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4    &kp P          &kp N7    &kp N8     &kp N9     &kp DOT    &tog 0     &tog 5
+//  _______________________________________________________________      ________________________________________________________________
+// | MAP/ZOOM | PRVS WPN |    UP    |   USE    | RELOAD  |   ULTI  |    |    4    |    5     |    6     |    F2    |    F3    | CONSOLE  |
+// |  LALT/Z  |    Q     |    W     |    E     |    R    |    T    |    |    4    |    5     |    6     |    F2    |    F3    |     '    |
+    &mt LALT Z &kp Q      &kp W      &kp E      &kp R     &kp T          &kp N4    &kp N5     &kp N6     &kp F2     &kp F3      &kp SQT
+// |_______________________________________________________________      ________________________________________________________________|    
+// |    WALK  |  LEFT    |  DOWN    |  RIGHT   |JUMP/PING|  THROW  |    |    1    |    2     |    3     |    L     |    ;     |   ESC    |
+// |    SHFT  |    A     |    S     |    D     | LCTRL/F |    G    |    |    1    |    2     |    3     |    L     |    ;     |   ESC    |
+    &kp LSHFT  &kp A      &kp S      &kp D      &mt LCTRL F &kp G        &kp N1    &kp N2     &kp N3     &kp L      &kp SEMI   &kp ESC
+// |_______________________________________________________________      ________________________________________________________________|
+//                                  |  SKILL1  |  CROUCH |   MIC   |    |   BUY   |          |          |
+//                                  |    C     |    V    |  SPACE  |    |   BUY   |          |          |
+                                     &kp C      &kp V     &kp SPACE      &kp B     &trans     &kp LCTRL
+//                                  |__________|_________|_________|    |_________|__________|__________|
+                    >;
+                };
+                
+                
+// LAYER 6 - MACOS____________________________________________________________________________________________________________________________
+                defaultmac_layer {
+                    bindings = <
+//  _______________________________________________________________      ________________________________________________________________
+// |    TAB   |    Q     |    W     |    E     |    R    |    T    |    |    Y    |    U     |    I     |    O     |    P     |    BKSP  |
+    &kp TAB    &kp Q      &kp W      &kp E      &kp R     &kp T          &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSPC
+// |_______________________________________________________________      ________________________________________________________________|    
+// |    CTRL  |    A     |    S     |    D     |    F    |    G    |    |    H    |    J     |    K     |    L     |    ;     |    '     |
+    &kp LCTRL  &kp A      &kp S      &kp D      &kp F     &kp G          &kp H     &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+// |_______________________________________________________________      ________________________________________________________________| 
+// |    SHFT  |    Z     |    X     |    C     |    V    |    B    |    |    N    |    M     |    ,     |    .     |    /     |    ESC   |
+    &kp LSHFT  &kp Z      &kp X      &kp C      &kp V     &kp B          &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp ESC
+// |_______________________________________________________________      ________________________________________________________________|
+//                                  |    GUI   |  LOWER  |  SPACE  |    |  ENTER  |   RAISE  |    ALT   |
+                                     &kp LGUI   &mo 7     &kp SPACE      &kp RET   &mo 8      &kp LALT
+//                                  |__________|_________|_________|    |_________|__________|__________|
+                    >;
+                };
+                
 
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
 
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
+// LAYER 7 - MACOS ____________________________________________________________________________________________________________________________
+                lowermac_layer {
+                    bindings = <
+//  _______________________________________________________________     __________________________________________________________________________
+// |   BKSP   |    F1    |    F2    |    F3    |    F4   |    F5   |    |    ^      |    &    |    *          |    (       |    )      |    =     |
+    &kp BSPC   &kp F1     &kp F2     &kp F3     &kp F4    &kp F5         &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR     &kp RPAR    &kp EQUAL
+//  _______________________________________________________________     __________________________________________________________________________|    
+// |    CTRL  |    1     |    2     |    3     |    4    |    5    |    |    -      |    +    |    `          |    {       |    }      |    \     |
+    &kp LCTRL  &kp N1     &kp N2     &kp N3     &kp N4    &kp N5         &kp MINUS   &kp PLUS  &kp GRAVE       &kp LBRC     &kp RBRC    &kp BSLH
+//  _______________________________________________________________     __________________________________________________________________________|      
+// |    SHFT  |    6     |    7     |    8     |    9    |    0    |    |    _      |    <    |    >          |    [       |    ]      |   "|"    |
+    &kp LSHFT  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp UNDER   &kp LT    &kp GT          &kp LBKT     &kp RBKT    &kp PIPE
+//  _______________________________________________________________     __________________________________________________________________________|    
+//                                  |    GUI   |         |    DEL  |    |   ENTER   |         |    ALT        |
+                                     &kp LGUI   &trans    &kp DELETE     &kp RET     &trans    &kp LALT
+//                                  |_________ |_________|_________|    |___________|_________|_______________|
+                        >;
+                };
 
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
 
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
+// LAYER 8 - MACOS ____________________________________________________________________________________________________________________________
+                raisemac_layer {
+                   bindings = <
+//  _______________________________________________________________      _______________________________________________________________________________
+// |    TAB   |    !     |    @     |    #     |    $    |    %    |    |   WINDOWS  |    HOME    |    UP       |    END      |    INS    |    DEL      |
+    &kp TAB    &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT      &tog 0       &kp HOME     &kp UP        &kp END       &kp INSERT  &kp DELETE
+//  _______________________________________________________________      _______________________________________________________________________________   
+// |    CTRL  |          |          |          |         |         |    |            |  LFT       |    DWN      |    RGT      |           |    PG_UP    |
+    &kp LCTRL  &trans     &trans     &trans     &trans    &trans         &trans       &kp LEFT     &kp DOWN      &kp RIGHT     &trans      &kp PAGE_UP
+//  _______________________________________________________________      _______________________________________________________________________________      
+// |    SHFT  |          |          |          |         |         |    | CAP        |            |             |             |           |    PG_DWN   |
+    &kp LSHFT  &trans     &trans     &trans     &trans    &trans         &kp CAPSLOCK &trans       &trans        &trans        &trans      &kp PAGE_DOWN
+//  _______________________________________________________________      _______________________________________________________________________________|       
+//                                  |    GUI   |         |    SPC  |    |   ENTER    |            |    ALT      |
+                    	             &kp LGUI   &trans    &kp SPACE      &kp RET      &trans       &kp LALT
+//                                  |_________ |_________|_________|    |____________|____________|_____________|
+                       >;
+                };
+
+
+// LAYER 9 - MACOS ____________________________________________________________________________________________________________________________
+                trimac_layer {
+                    bindings = <
+//  _________________________________________________________________________________________      ___________________________________________________________________________
+// |                |       CS       |     VALO     |   WINDOWS   |             |            |    |            |            |              |          |           |           |
+    &trans           &tog 4           &tog 5         &tog 0        &trans        &trans            &trans       &trans       &trans         &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________
+// |    BTCLR       |    BT1         |    BT2       |    BT3      |    BT4      | BT5        |    |            |            |              |          |           |           |  
+    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans       &trans      &trans         &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________  
+// |                |                |              |             |             |            |    |            |            |              |          |           |           |
+    &trans           &trans           &trans         &trans        &trans        &trans            &trans       &trans       &trans        &trans     &trans      &trans
+//  _________________________________________________________________________________________      ___________________________________________________________________________|
+//                                                  |    ALT      |             | SPC        |    |            |            | GUI          |   
+                    	                             &kp LALT      &trans        &kp SPACE         &kp RET      &trans       &kp LGUI
+//                                                  |_____________|_____________|____________|    |____________|____________|______________|
+                        >;
+                };
     };
 };
