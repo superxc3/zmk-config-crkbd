@@ -15,14 +15,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        win {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-            label = "Base";
+            label = "win";
             bindings = <
 &kp ESCAPE      &kp Q  &kp W  &kp F      &kp P  &kp B        &kp J    &kp L  &kp U      &kp Y    &kp SQT           &kp BACKSPACE
 &kp LEFT_SHIFT  &kp A  &kp R  &kp S      &kp T  &kp G        &kp M    &kp N  &kp E      &kp I    &kp O             &kp LEFT_SHIFT
@@ -31,14 +31,14 @@
             >;
         };
 
-        lower_layer {
+        win_lower {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    |BTCLR|     | SPC |   | ENT |     | ALT |
 
-            label = "Lower";
+            label = "winL";
             bindings = <
 &kp TILDE  &kp EXCL        &kp AT        &kp HASH  &kp DOLLAR  &kp PRCNT    &kp CARET       &kp AMPS   &kp ASTERISK  &kp LPAR   &kp RPAR           &kp BACKSPACE
 &kp EQUAL  &kp N1          &kp N2        &kp N3    &kp N4      &kp N5       &kp N6          &kp N7     &kp N8        &kp N9     &kp N0             &kp QUESTION
@@ -47,14 +47,14 @@
             >;
         };
 
-        raise_layer {
+        win_raise {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            label = "Raise";
+            label = "winR";
             bindings = <
 &kp LEFT_CONTROL  &kp F1    &kp F2          &kp F3        &kp F4           &kp F5     &kp F6      &kp F7      &kp F8       &kp F9         &kp F10  &kp LEFT_CONTROL
 &kp LEFT_SHIFT    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &kp F11    &kp F12     &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END  &kp LEFT_SHIFT
@@ -68,7 +68,7 @@
 &out OUT_TOG    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_SEL 4    &kp C_MUTE  &kp C_VOL_UP  &kp C_VOLUME_DOWN  &none           &none  &bootloader
 &kp CAPS        &none         &none         &tog 5        &tog 4        &none           &kp C_PLAY  &kp C_PAUSE   &kp C_NEXT         &kp C_PREVIOUS  &none  &sys_reset
 &kp KP_NUMLOCK  &none         &none         &none         &none         &none           &none       &none         &none              &none           &none  &bt BT_CLR
-                                            &none         &none         &none           &none       &none         &none
+                                            &none         &tog 6        &none           &none       &tog 0        &none
             >;
 
             label = "Control";
@@ -91,6 +91,36 @@
 &kp BACKSPACE  &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS    &trans  &trans  &trans  &trans  &trans  &trans
 &kp DELETE     &kp KP_NUMLOCK   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none           &trans  &trans  &trans  &trans  &trans  &trans
                                                  &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER    &trans  &trans  &trans
+            >;
+        };
+
+        mac {
+            label = "mac";
+            bindings = <
+&kp ESCAPE      &kp Q  &kp W  &kp F         &kp P  &kp B        &kp J    &kp L  &kp U          &kp Y    &kp SQT           &kp BACKSPACE
+&kp LEFT_SHIFT  &kp A  &kp R  &kp S         &kp T  &kp G        &kp M    &kp N  &kp E          &kp I    &kp O             &kp LEFT_SHIFT
+&kp LEFT_ALT    &kp Z  &kp X  &kp C         &kp D  &kp V        &kp K    &kp H  &kp COMMA      &kp DOT  &kp LEFT_BRACKET  &kp LEFT_ALT
+                              &kp LEFT_WIN  &mo 7  &kp SPACE    &kp RET  &mo 8  &kp RIGHT_WIN
+            >;
+        };
+
+        mac_lower {
+            label = "macL";
+            bindings = <
+&kp TILDE  &kp EXCL        &kp AT        &kp HASH  &kp DOLLAR  &kp PRCNT    &kp CARET       &kp AMPS   &kp ASTERISK       &kp LPAR   &kp RPAR           &kp BACKSPACE
+&kp EQUAL  &kp N1          &kp N2        &kp N3    &kp N4      &kp N5       &kp N6          &kp N7     &kp N8             &kp N9     &kp N0             &kp QUESTION
+&kp GRAVE  &kp UNDERSCORE  &kp ASTERISK  &kp SEMI  &kp PLUS    &kp COMMA    &kp PERIOD      &kp MINUS  &kp COLON          &kp SLASH  &kp RIGHT_BRACKET  &kp BACKSLASH
+                                         &none     &none       &none        &kp LEFT_SHIFT  &mo 3      &kp RIGHT_CONTROL
+            >;
+        };
+
+        mac_raise {
+            label = "macR";
+            bindings = <
+&kp LEFT_CONTROL  &kp F1    &kp F2          &kp F3        &kp F4           &kp F5     &kp F6   &kp F7      &kp F8       &kp F9         &kp F10  &kp LEFT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &kp F11    &kp F12  &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END  &kp LEFT_SHIFT
+&kp LEFT_ALT      &none     &none           &none         &kp PRINTSCREEN  &kp INS    &none    &kp DELETE  &none        &kp RCTRL      &none    &kp LEFT_ALT
+                                            &kp LWIN      &kp LCTRL        &kp TAB    &none    &none       &none
             >;
         };
     };
