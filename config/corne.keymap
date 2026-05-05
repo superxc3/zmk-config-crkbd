@@ -2,6 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
  */
 
 #include <dt-bindings/zmk/mouse.h>
@@ -34,7 +35,7 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | SHFT |STDUL|     |     |     |   |     |     |     |     |     |      |
             //                    |BTCLR|     | SPC |   | ENT |     | ALT |
 
             label = "winL";
