@@ -10,8 +10,11 @@ This repo is suitable for general corne.
 
 ## First time bluetooth connection
 Please test before flashing to avoid complicating troubleshoot procedure.
-![ble keyboard corne](https://user-images.githubusercontent.com/79617315/230918198-c6b5562f-e7e5-463d-b915-6c299875f332.jpg)
+<img width="1706" height="989" alt="image" src="https://github.com/user-attachments/assets/c8ce12b0-9632-4053-a68c-fc2cd2f0dad3" />
 
+Compiled firmware for 42-oled on 2026/07/27: [Download](https://cdn.shopify.com/s/files/1/0691/8963/2259/files/Crkbd-42-oled.zip?v=1785113167)
+## ZMK Studio Support
+Refer image above for zmk studio unlock. ZMK studio [web mapping](https://zmk.studio/), gui [download](https://zmk.studio/download). 
 </br>
 
 ## Key remap
